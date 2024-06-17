@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UI Precog Sandbox</title>
+    <link rel="stylesheet" type="text.css" href="./scss/_normalize.css" />
+    <link rel="stylesheet" href="./scss/main.css" />
+    <link rel="stylesheet" href="./scss/_fonts.css" />
+    <link rel="stylesheet" href="./scss/_fontawesome-all.css" />
+    <link rel="stylesheet" href="./scss/google.css" />
+  </head>
+  <body>
+    <div class="Page">
+      <div class="PipelineCreatePage">
+        <div class="Container">
+          <h1>Connect to SAP Datasphere/HANA Cloud</h1>
+        </div>
+        <div class="Container">
+          <div class="SourceAdd">
+            <div class="Group">
+              <button class="Button" type="button">
+                <i class="Icon fas fa-arrow-left"></i>Back
+              </button>
+            </div>
+            <div class="ConnectorForm">
+              <p>
+                To connect you will need to log into SAP Datasphere with
+                administrator privileges. In the left navigation click on Space
+                Management. Create a new database and user in the relevant
+                Space. The Database Username, Host Name, and Password will be
+                used in the form below.
+              </p>
+              <p>
+                Next you will need to whitelist Precog’s IP Addresses. In the
+                left navigation click on System, then Configuration panel.
+                Select the <strong>IP Allowlist</strong> tab and Add the
+                following IP Addresses
+                <strong>44.205.118.35</strong> (precog.cloud) and
+                <strong>3.73.24.30</strong> (eu.precog.cloud).
+              </p>
+              <p>
+                Additionally you will need to upload Amazon’s security
+                certificate. In a new browser window navigate to
+                https://www.amazontrust.com/repository/AmazonRootCA1.pem. Copy
+                all the text visible, including the “ -----BEGIN and END
+                CERTIFICATE-----” lines. Paste this text into a text editor of
+                your choice. Save this text file as a .pem file called
+                <strong>precog</strong>. You may need to rename the file with
+                the .pem extension after saving e.g. in TextEdit you must rename
+                from .rtf to .pem after saving the initial file. Upload this
+                file to the <strong>Security</strong> tab.
+              </p>
+              <div class="KindForm">
+                <label class="Field"
+                  ><div class="Field-label">Server Name</div>
+                  <div class="Field-description">
+                    <p>SAP Datasphere server name.</p>
+                  </div>
+                  <input
+                    class="Input"
+                    type="text"
+                    placeholder="example.hanacloud.ondemand.com" /></label
+                ><label class="Field"
+                  ><div class="Field-label">Server Port</div>
+                  <div class="Field-description">
+                    <p>Server port to connect to.</p>
+                  </div>
+                  <input class="Input" type="text" placeholder="443" /></label
+                ><label class="Field"
+                  ><div class="Field-label">Encrypt</div>
+                  <div class="Field-description">
+                    <p>Whether TLS/SSL encryption needs to be used or not.</p>
+                  </div>
+                  <div class="Select">
+                    <select class="Select-select">
+                      <option>no</option>
+                      <option>yes</option></select
+                    ><span class="Select-icon"
+                      ><i class="Icon fas fa-chevron-down"></i
+                    ></span></div></label
+                ><label class="Field"
+                  ><div class="Field-label">Additional Properties</div>
+                  <div class="Field-description">
+                    <p>
+                      Addition JDBC properties to use, specified in the form
+                      '&amp;property1=value&amp;property2=value'. Please see
+                      https://help.sap.com/docs/SAP_HANA_CLIENT/f1b440ded6144a54ada97ff95dac7adf/109397c2206a4ab2a5386d494f4cf75e.html?locale=en-US
+                      for the supported properties.
+                    </p>
+                  </div>
+                  <input class="Input" type="text" placeholder="" /></label
+                ><label class="Field"
+                  ><div class="Field-label">Username</div>
+                  <div class="Field-description">
+                    <p>Username to use for authentication.</p>
+                  </div>
+                  <input class="Input" type="text" placeholder="" /></label
+                ><label class="Field"
+                  ><div class="Field-label">Password</div>
+                  <div class="Field-description">
+                    <p>Password for the user.</p>
+                  </div>
+                  <input class="Input" type="password" placeholder=""
+                /></label>
+              </div>
+              <div class="Group">
+                <div class="ButtonGroup">
+                  <button class="Button" type="button">
+                    <i class="Icon fas fa-plus"></i>Create destination
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
