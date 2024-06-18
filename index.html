@@ -28,8 +28,9 @@
                 To connect you will need to log into SAP Datasphere with
                 administrator privileges. In the left navigation click on Space
                 Management. Create a new database and user in the relevant
-                Space. The Database Username, Host Name, and Password will be
-                used in the form below.
+                Space. The Database Username, Host Name, and Password are
+                displayed in the Database User Details and will be used in the
+                form below.
               </p>
               <p>
                 Next you will need to whitelist Precog’s IP Addresses. In the
@@ -53,24 +54,61 @@
               </p>
               <div class="KindForm">
                 <label class="Field"
-                  ><div class="Field-label">Server Name</div>
+                  ><div class="Field-label">Database Name</div>
                   <div class="Field-description">
-                    <p>SAP Datasphere server name.</p>
+                    <p>
+                      The database name will be used as a descriptive name for
+                      this destination in Precog.
+                    </p>
                   </div>
-                  <input
-                    class="Input"
-                    type="text"
-                    placeholder="example.hanacloud.ondemand.com" /></label
+                  <input class="Input" type="text" placeholder=""
+                /></label>
+                <label class="Field"
+                  ><div class="Field-label">Host Name</div>
+                  <div class="Field-description">
+                    <p>
+                      The database Host Name can be found in the Database User
+                      Details in the Space Management panel. The Host Name will
+                      consist of a alpha-numeric string followed by
+                      hanacloud.ondemand.com e.g.
+                      e5g7r6f3-8gk6-9b25-d7e1-3r900MfMc7q4.hana-prod.us32.hanacloud.ondemand.com
+                    </p>
+                  </div>
+                  <input class="Input" type="text" placeholder="" /></label
                 ><label class="Field"
-                  ><div class="Field-label">Server Port</div>
+                  ><div class="Field-label">Port</div>
                   <div class="Field-description">
-                    <p>Server port to connect to.</p>
+                    <p>
+                      The port used can be found in the Database User Details in
+                      the Space Management panel. It is typically 443.
+                    </p>
                   </div>
-                  <input class="Input" type="text" placeholder="443" /></label
+                  <input class="Input" type="text" placeholder="443" /><label
+                    class="Field"
+                    ><div class="Field-label">Database Username</div>
+                    <div class="Field-description">
+                      <p>
+                        The username and password can be found in the Database
+                        User Details in the Space Management panel.
+                      </p>
+                    </div>
+                    <input class="Input" type="text" placeholder="" /></label
+                  ><label class="Field"
+                    ><div class="Field-label">Database Password</div>
+                    <div class="Field-description">
+                      <p></p>
+                    </div>
+                    <input
+                      class="Input"
+                      type="password"
+                      placeholder="" /></label></label
                 ><label class="Field"
                   ><div class="Field-label">Encrypt</div>
                   <div class="Field-description">
-                    <p>Whether TLS/SSL encryption needs to be used or not.</p>
+                    <p>
+                      Select whether extra TLS/SSL encryption needs to be used.
+                      Precog always encrypts using HTTP/2.
+                    </p>
                   </div>
                   <div class="Select">
                     <select class="Select-select">
@@ -83,25 +121,16 @@
                   ><div class="Field-label">Additional Properties</div>
                   <div class="Field-description">
                     <p>
-                      Addition JDBC properties to use, specified in the form
-                      '&amp;property1=value&amp;property2=value'. Please see
-                      https://help.sap.com/docs/SAP_HANA_CLIENT/f1b440ded6144a54ada97ff95dac7adf/109397c2206a4ab2a5386d494f4cf75e.html?locale=en-US
-                      for the supported properties.
+                      If you require additional JDBC properties use the
+                      specified form '&property1=value&property2=value'. You can
+                      find a full list of these properties in the
+                      <a
+                        href="https://help.sap.com/docs/SAP_HANA_CLIENT/f1b440ded6144a54ada97ff95dac7adf/109397c2206a4ab2a5386d494f4cf75e.html"
+                        >SAP JDBC Connection Properties list</a
+                      >.
                     </p>
                   </div>
-                  <input class="Input" type="text" placeholder="" /></label
-                ><label class="Field"
-                  ><div class="Field-label">Username</div>
-                  <div class="Field-description">
-                    <p>Username to use for authentication.</p>
-                  </div>
-                  <input class="Input" type="text" placeholder="" /></label
-                ><label class="Field"
-                  ><div class="Field-label">Password</div>
-                  <div class="Field-description">
-                    <p>Password for the user.</p>
-                  </div>
-                  <input class="Input" type="password" placeholder=""
+                  <input class="Input" type="text" placeholder=""
                 /></label>
               </div>
               <div class="Group">
