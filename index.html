@@ -26,7 +26,7 @@
             <div class="ConnectorForm">
               <p>
                 To connect you will need to log into SAP Datasphere with
-                administrator privileges. In the left navigation click on Space
+                administrator privileges. In the left navigation, click on Space
                 Management. Create a new database and user in the relevant
                 Space. The Database Username, Host Name, and Password are
                 displayed in the Database User Details and will be used in the
@@ -34,22 +34,24 @@
               </p>
               <p>
                 Next you will need to whitelist Precog’s IP Addresses. In the
-                left navigation click on System, then Configuration panel.
+                left navigation click on System and then Configuration panel.
                 Select the <strong>IP Allowlist</strong> tab and Add the
                 following IP Addresses
                 <strong>44.205.118.35</strong> (precog.cloud) and
                 <strong>3.73.24.30</strong> (eu.precog.cloud).
               </p>
               <p>
-                Additionally you will need to upload Amazon’s security
+                Additionally, you will need to upload Amazon’s security
                 certificate. In a new browser window navigate to
-                https://www.amazontrust.com/repository/AmazonRootCA1.pem. Copy
-                all the text visible, including the “ -----BEGIN and END
-                CERTIFICATE-----” lines. Paste this text into a text editor of
-                your choice. Save this text file as a .pem file called
+                <a
+                  href="https://www.amazontrust.com/repository/AmazonRootCA1.pem"
+                  >Amazon's Security Certificate</a
+                >
+                . Copy all visible text, including the “BEGIN and END
+                CERTIFICATE” lines. Paste this text into a text editor of your
+                choice. Save this text file as a <code>.pem</code> file called
                 <strong>precog</strong>. You may need to rename the file with
-                the .pem extension after saving e.g. in TextEdit you must rename
-                from .rtf to .pem after saving the initial file. Upload this
+                the .pem extension after saving the initial file. Upload this
                 file to the <strong>Security</strong> tab.
               </p>
               <div class="KindForm">
@@ -69,9 +71,11 @@
                     <p>
                       The database Host Name can be found in the Database User
                       Details in the Space Management panel. The Host Name will
-                      consist of a alpha-numeric string followed by
+                      consist of a long alpha-numeric string followed by
                       hanacloud.ondemand.com e.g.
-                      e5g7r6f3-8gk6-9b25-d7e1-3r900MfMc7q4.hana-prod.us32.hanacloud.ondemand.com
+                      <code
+                        >e5g7r6f3-8gk6-9b25-d7e1-3r900MfMc7q4.hana-prod.us32.hanacloud.ondemand.com</code
+                      >
                     </p>
                   </div>
                   <input class="Input" type="text" placeholder="" /></label
@@ -103,7 +107,7 @@
                       type="password"
                       placeholder="" /></label></label
                 ><label class="Field"
-                  ><div class="Field-label">Encrypt</div>
+                  ><div class="Field-label">Encryption</div>
                   <div class="Field-description">
                     <p>
                       Select whether extra TLS/SSL encryption needs to be used.
@@ -125,7 +129,7 @@
                       <strong>Optional</strong> If you require additional JDBC
                       properties use the specified form
                       '&property1=value&property2=value'. You can find a full
-                      list of these properties in the <i></i>
+                      list of these properties in the
                       <a
                         href="https://help.sap.com/docs/SAP_HANA_CLIENT/f1b440ded6144a54ada97ff95dac7adf/109397c2206a4ab2a5386d494f4cf75e.html"
                         >SAP JDBC Connection Properties list</a
