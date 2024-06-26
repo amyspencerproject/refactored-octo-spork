@@ -75,7 +75,7 @@
                       hanacloud.ondemand.com e.g.
                       <code
                         >e5g7r6f3-8gk6-9b25-d7e1-3r900MfMc7q4.hana-prod.us32.hanacloud.ondemand.com</code
-                      >
+                      >.
                     </p>
                   </div>
                   <input class="Input" type="text" placeholder="" /></label
@@ -107,7 +107,9 @@
                       type="password"
                       placeholder="" /></label></label
                 ><label class="Field"
-                  ><div class="Field-label">Encryption</div>
+                  ><div class="Field-label">
+                    Encryption <span style="color: gray">(optional)</span>
+                  </div>
                   <div class="Field-description">
                     <p>
                       Select whether extra TLS/SSL encryption needs to be used.
@@ -122,14 +124,16 @@
                       ><i class="Icon fas fa-chevron-down"></i
                     ></span></div></label
                 ><label class="Field"
-                  ><div class="Field-label">Additional Properties</div>
+                  ><div class="Field-label">
+                    Additional Properties
+                    <span style="color: gray">(optional)</span>
+                  </div>
                   <div class="Field-description">
                     <p></p>
                     <p>
-                      <strong>Optional</strong>. If you require additional JDBC
-                      properties use the specified form
-                      '&property1=value&property2=value'. You can find a full
-                      list of these properties in the
+                      If you require additional JDBC properties use the
+                      specified form '&property1=value&property2=value'. You can
+                      find a full list of these properties in the
                       <a
                         href="https://help.sap.com/docs/SAP_HANA_CLIENT/f1b440ded6144a54ada97ff95dac7adf/109397c2206a4ab2a5386d494f4cf75e.html"
                         >SAP JDBC Connection Properties list</a
