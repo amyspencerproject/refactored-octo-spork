@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UI Precog Sandbox</title>
-    <link rel="stylesheet" type="text.css" href="./scss/_normalize.css" />
+    <link rel="stylesheet" type="text.css" href="./scss/normalize.css" />
     <link rel="stylesheet" href="./scss/main.css" />
-    <link rel="stylesheet" href="./scss/_fonts.css" />
-    <link rel="stylesheet" href="./scss/_fontawesome-all.css" />
+    <link rel="stylesheet" href="./scss/fonts.css" />
+    <link rel="stylesheet" href="./scss/fontawesome-all.css" />
     <link rel="stylesheet" href="./scss/google.css" />
   </head>
   <body>
@@ -34,8 +34,8 @@
               </p>
               <p>
                 Next you will need to whitelist Precog’s IP Addresses. In the
-                left navigation click on System and then Configuration panel.
-                Select the <strong>IP Allowlist</strong> tab and Add the
+                left navigation click on System and then the Configuration
+                panel. Select the <strong>IP Allowlist</strong> tab and add the
                 following IP Addresses
                 <strong>44.205.118.35</strong> (precog.cloud) and
                 <strong>3.73.24.30</strong> (eu.precog.cloud).
@@ -112,14 +112,21 @@
                   </div>
                   <div class="Field-description">
                     <p>
-                      Select whether extra TLS/SSL encryption needs to be used.
-                      Precog always encrypts using HTTP/2.
+                      Selecting "yes" is the default answer for most users. SAP
+                      HANA Cloud does not accept connections that are not
+                      TLS/SSL encrypted. Only on-premise connections can be made
+                      without TLS/SSL encryption. You can read more about this
+                      option in the
+                      <a
+                        href="https://help.sap.com/docs/SAP_HANA_PLATFORM/b3ee5778bc2e4a089d3299b82ec762a7/dbd3d887bb571014bf05ca887f897b99.html"
+                        >SAP Help documentation</a
+                      >.
                     </p>
                   </div>
                   <div class="Select">
                     <select class="Select-select">
-                      <option>no</option>
-                      <option>yes</option></select
+                      <option>yes</option>
+                      <option>no</option></select
                     ><span class="Select-icon"
                       ><i class="Icon fas fa-chevron-down"></i
                     ></span></div></label
